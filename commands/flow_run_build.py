@@ -153,7 +153,12 @@ class FlowRunBuild( ExecCommand ):
             cmd.append('--log')
             cmd.append('3')
 
-        print("test commit")
+        if _flow_.files_no_list:
+            cmd.append('--no-files')
+
+        if _flow_.files_error_on_missing:
+            cmd.append('--error-on-missing')
+
         print("[flow] build " + " ".join(cmd))
 
         if encoding is None:

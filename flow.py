@@ -43,6 +43,8 @@ class FlowProject( sublime_plugin.EventListener ):
         self.build_verbose = False
         self.build_only = False
         self.launch_only = False
+        self.files_no_list = False
+        self.files_error_on_missing = False
 
     def set_flow_file( self, file_name ):
         print("[flow] set flow file to " + file_name)
@@ -211,6 +213,8 @@ class FlowProject( sublime_plugin.EventListener ):
         _result.append(['Toggle verbose build', "currently : " + str(self.build_verbose).lower() ])
         _result.append(['Toggle build only', "currently : " + str(self.build_only).lower() ])
         _result.append(['Toggle launch only', "currently : " + str(self.launch_only).lower() ])
+        _result.append(['Toggle files no list', "currently : " + str(self.files_no_list).lower() ])
+        _result.append(['Toggle files error on missing', "currently : " + str(self.files_error_on_missing).lower() ])
         # _result.append(['Package output folder', "generates a zip to output folder"])
         # _result.append(['Clean output folder', "delete the output folder"])
         # _result.append(['Clean build output', "delete the build folder"])

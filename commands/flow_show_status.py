@@ -57,16 +57,34 @@ class FlowShowStatus( sublime_plugin.WindowCommand ):
 
             print("[flow] toggle launch only, now at " + str(_flow_.launch_only))
 
-            #package
+            #files no list flag
         if index == 6:
+            if _flow_.files_no_list:
+                _flow_.files_no_list = False
+            else:
+                _flow_.files_no_list = True
+
+            print("[flow] toggle files no list, now at " + str(_flow_.files_no_list))
+
+            #files error on missing flag
+        if index == 7:
+            if _flow_.files_error_on_missing:
+                _flow_.files_error_on_missing = False
+            else:
+                _flow_.files_error_on_missing = True
+
+            print("[flow] toggle files error on missing, now at " + str(_flow_.files_error_on_missing))
+
+            #package
+        if index == 8:
             pass
 
             #clean output
-        if index == 7:
+        if index == 9:
             pass
 
             #clean build
-        if index == 8:
+        if index == 10:
             pass
 
 
