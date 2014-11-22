@@ -154,7 +154,7 @@ class FlowRunBuild( ExecCommand ):
             cmd.append('3')
 
         if _flow_.files_no_list:
-            cmd.append('--no-files')
+            cmd.append('--no-list')
 
         if _flow_.files_error_on_missing:
             cmd.append('--error-on-missing')
