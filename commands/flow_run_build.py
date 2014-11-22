@@ -126,6 +126,7 @@ class FlowRunBuild( ExecCommand ):
 
         if not _flow_.flow_file:
             self.window.run_command('flow_show_status')
+            print("test commit")
             print("[flow] build : no flow file")
             return
 
