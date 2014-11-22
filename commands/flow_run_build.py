@@ -126,7 +126,6 @@ class FlowRunBuild( ExecCommand ):
 
         if not _flow_.flow_file:
             self.window.run_command('flow_show_status')
-            print("test commit")
             print("[flow] build : no flow file")
             return
 
@@ -154,6 +153,7 @@ class FlowRunBuild( ExecCommand ):
             cmd.append('--log')
             cmd.append('3')
 
+        print("test commit")
         print("[flow] build " + " ".join(cmd))
 
         if encoding is None:
